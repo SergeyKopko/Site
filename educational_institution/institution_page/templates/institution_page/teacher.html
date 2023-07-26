@@ -1,0 +1,18 @@
+{% extends 'institution_page/base.html' %}
+    {% load static %}
+    {%block link%}<link type="text/css" href="{% static 'institution_page/css/teacher.css' %}"  rel="stylesheet" />{%endblock%}
+
+    {% block content %}
+        <div class="container_teacher">
+            <p style=" text-align:center;"><img src="/media/{{ teacher.photo }}" alt="" height="300px" width="300px"></p>
+            <p style="text-align:center; font-size: 20px; font-weight: bold" >{{teacher.full_name}}</p>
+            <p>{{teacher.potition}}</p>
+            <div>
+                <p style="text-align:center;"><i>Описание и достижения</i></p>
+                <p style="white-space:pre-wrap; font-size:17px; padding-left: 15px; text-align:center; ">{{ teacher.description }}</p>
+            </div>
+            <p style="text-align:center;"><a href="{% url 'teachers_list' %}" style="text-decoration:none; color: #454745; border: 2px solid #ccc; border-radius:15px; padding:5px;">Вернуться в меню</a></p>
+            <hr>
+            <br>
+        </div>
+    {% endblock %}

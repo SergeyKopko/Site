@@ -1,0 +1,8 @@
+.container_teacher {
+    position: relative;
+    top: 150px;
+    display: block;
+}
+body {
+    background:#eee;
+}

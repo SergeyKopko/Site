@@ -1,0 +1,82 @@
+
+{% extends 'institution_page/base.html' %}
+    {% load static %}
+    {%block link%}<link type="text/css" href="{% static 'institution_page/css/main_window.css' %}"  rel="stylesheet" />
+{%endblock%}
+    <title>{{title}}</title>
+
+    {% block content %}
+    <div class="container_main">
+        <div class="img_info_main">
+            <p>
+                <img src="{% static 'institution_page/img/755166429392740.jpg' %}">
+            </p>
+
+        </div>
+
+        <div class="content_info">
+            <div class="icon"><img src="{% static 'institution_page/img/free-icon-quote-565703.png' %}" alt="">
+             <p>
+                Мы — лидер кибернетики в Германии. C 1920 года даем современное образование , готовим высококлассных специалистов!
+            </p></div>
+        </div>
+
+        <div class="newb_block">
+            <p><i>Последние новости</i></p>
+            <hr>
+            {% for article in form %}
+            <div class="container_info">
+                 <p style="font-size:18px; padding:4px;">{{article.theme}}</p>
+                <p><img src=" media/{{article.photo}}" alt="" width="200px" height="200px"></p>
+                <div class="btn_main">
+                    <p style="position:relative;left:110px;"><a href="{{ article.get_absolute_url }}">Почитать</a></p>
+                </div>
+            </div>
+
+            {% endfor %}
+            {% if form|length == 0 %}
+                    <span style="display: block; text-align:center; position:relative;"><i>Наш список пуст! Ожидайте новых новостей :)</i></span>
+            {% endif %}
+            <hr>
+        <div class="progress_container">
+            <p style="text-align: center; font-weight: bold;"><i>Достижения нашего Учреждения</i></p>
+            <p style="text-align: center; opacity:0.93"><a href="{% url 'progress_institution' %}"><img src="{% static  'institution_page/img/progress_link.jpg' %}" width="800px" height="500px" alt=""></a></p>
+        </div>
+            <br>
+            <hr>
+        <div id="map">
+        </div>
+            <p>Мы ждем Вас</p>
+            <dl style="margin-left: 150px;">Наши контакты:</dl>
+            <div style="margin-left: 350px; top: -25px;">
+            <i>Velcom: +375290032521</i>
+            <br>
+            <i>MTC: +375442349471</i>
+            </div>
+            <br>
+
+            <i style="margin-left: 250px; ">Адрес: г.Минск, улица Фрунзенская, здание 26</i>
+
+        </div>
+
+    </div>
+
+
+<script type="text/javascript">
+ymaps.ready(init);
+
+function init() {
+    var myMap = new ymaps.Map("map", {
+        center: [53.897438, 27.524542],
+        zoom: 10
+    });
+
+    var myPlacemark = new ymaps.Placemark([53.897438, 27.524542], {
+        hintContent: 'мы здесь!',
+        balloonContent: 'Частная школа БЭУ'
+    });
+
+    myMap.geoObjects.add(myPlacemark);
+}
+</script>
+    {% endblock %}

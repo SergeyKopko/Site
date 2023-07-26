@@ -1,0 +1,17 @@
+{% extends 'institution_page/base.html' %}
+    {% load static %}
+    {%block link%}<link type="text/css" href="{% static 'institution_page/css/service.css' %}"  rel="stylesheet" />{%endblock%}
+
+    {% block content %}
+            <div class="container_service">
+            <p style="text-align:center;" border><img src="/media/{{ service.photo }}" alt="" height="300px" width="300px"></p>
+            <p style="text-align:center; font-size: 20px; font-weight: bold" >{{service.name}}</p>
+            <div>
+                <p style="text-align:center;"><i>Описание</i></p>
+                <p style="white-space:pre-wrap; font-size:17px; padding-left: 15px;">{{ service.description }}</p>
+            </div>
+            <p style="text-align:center;"><a href="{% url 'paid_services' %}" style="text-decoration:none; color: #454745; border: 2px solid #ccc; border-radius:15px; padding:5px;">Вернуться в меню</a></p>
+            <hr>
+            <br>
+        </div>
+    {% endblock %}

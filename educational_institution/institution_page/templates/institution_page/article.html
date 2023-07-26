@@ -1,0 +1,20 @@
+{% extends 'institution_page/base.html' %}
+    {% load static %}
+    {%block link%}<link type="text/css" href="{% static 'institution_page/css/article.css' %}"  rel="stylesheet" />{%endblock%}
+
+    {% block content %}
+        <div class="container_article">
+            <p>{{article.theme}}</p>
+            <p><img style="border:6px solid #fff; border-radius:50%;" src="{{ article.photo.url }}" width="300px" height="300px" alt=""></p>
+            <div class="description_article" style="position:relative; top: 50px;">
+            <p>{{article.description}}</p>
+                <div class="button_back">
+                  <p><a href="{% url 'main_window' %}">Главное меню</a></p>
+                </div>
+            </div>
+        </div>
+            <br>
+            <hr>
+            <br>
+
+    {% endblock %}

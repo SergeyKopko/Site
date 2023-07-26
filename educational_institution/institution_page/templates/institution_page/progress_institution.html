@@ -1,0 +1,35 @@
+{% extends 'institution_page/base.html' %}
+    {% load static %}
+    {%block link%}
+                  <link type="text/css" href="{% static 'institution_page/css/progress_institution.css' %}"  rel="stylesheet" />
+    {%endblock%}
+
+{% block content %}
+    <div class="container_progress">
+        <p>Наши достижения и лицензии</p>
+        <hr>
+        <i> Что разум человека может постигнуть и во что он может поверить, того он способен достичь</i>
+        <p><i>( Наполеон Хилл )</i></p>
+        <p><img src="{% static 'institution_page/img/documents.jpg' %}"  alt=""></p>
+        <hr>
+        <div class="container_files">
+        {% for file in form %}
+            <div class="document_info">
+            <p style="font-weight: 500;">{{ file.reward }}</p>
+             <p style="font-size: 17px;"><i>{{ file.description }}</i></p>
+                    <p ><img src="{{ file.photo.url }}" width="250px" height="250px" style="border:6px solid #ddd; border-radius:50%;" alt=""></p>
+                    <p><a style="text-decoration: none;" href="{{ file.file.url }}">Просмотреть файл</a></p>
+            </div>
+            {% endfor %}
+        </div>
+        <hr>
+        <br>
+        <p>Новое направление в сферы робототехники для детей</p>
+        <p  style="display: inline; position:relative; left: -200px; "><img src="{% static 'institution_page/img/robot.webp' %}" alt=""></p>
+        <p  style="display: inline; position:relative; left: -100px;" ><img src="{% static 'institution_page/img/robot_2.png' %}" alt=""></p>
+        <p class="info_text">Наши ребята ежегодно создают что-то новое и занимают призовые места! Присоединяйся и ты к нам :)</p>
+                    <hr>
+            <br>
+    </div>
+
+{% endblock %}

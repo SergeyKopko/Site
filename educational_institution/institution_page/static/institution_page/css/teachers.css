@@ -1,0 +1,71 @@
+.container_teachers {
+
+    position: relative;
+    top: 125px;
+}
+body {
+    background:#eee;
+}
+
+
+.container_teachers > p {
+    text-align: center;
+}
+
+
+
+.teacher_info {
+    padding:60px;
+    margin: 1px;
+    weight: 700px;
+    height:500px;
+    border: 2px solid #ccc;
+    text-align:center;
+}
+
+.name_teacher {
+    font-size: 20px;
+    font-weight: 500;
+    color:#04d119;
+}
+
+.position_teacher {
+    font-size: 16px;
+    color:#069c15;
+}
+
+.photo_teacher {
+
+
+}
+
+.img > p {
+    position: relative;
+    text-align: center;
+}
+
+.img > p > img {
+
+    width: 1600px;
+    height: 500px;
+    box-shadow: 10px 10px 5px #fff;
+    transition: all 0.5s;
+}
+
+.icon_teacher {
+    opacity: 0.7;
+    position: absolute;
+    left: 422px;
+    top: 587px;
+}
+.icon_teacher > img {
+
+    weight: 140px;
+    height: 140px
+
+}
+
+.profile_teacher > a {
+    text-decoration: none;
+    color: #069c15;
+}

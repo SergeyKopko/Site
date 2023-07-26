@@ -1,0 +1,42 @@
+body {
+    background: #eee;
+
+}
+
+.container_article {
+    position: relative;
+    top: 120px;
+}
+
+.container_article > p {
+
+    text-align: center;
+    font-weight: bold;
+}
+
+.container_article > p {
+    text-align: center;
+    font-weight: bold;
+}
+
+.description_article > p {
+    white-space: break-spaces;
+    word-wrap:break-word;
+    text-align: justify;
+    padding: 20px;
+
+}
+
+.button_back > p > a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #3a3d3a;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    padding: 7px;
+    align-items:center;
+}
+
+.button_back > p {
+    text-align: center;
+}

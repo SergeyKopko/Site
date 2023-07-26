@@ -1,0 +1,47 @@
+.container_main {
+    width: 100%;
+    height:70px;
+    background: #e3e3e3;
+}
+#map {
+     width: 400px;
+     height:300px;
+     margin-right:150px;
+     border: 10px solid #ddd;
+     border-radius:15px;
+     float:right;
+     margin-bottom:200px;
+}
+.header {
+    position: absolute;
+    top: 15px;
+    height: 200px;
+}
+
+.header > ul > li {
+    display: inline;
+    text-align: center;
+    font-size: 16px;
+    padding: 5px;
+    margin: 5px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.5s;
+
+
+}
+.header > ul > li > a {
+        text-decoration: none;
+        color: #262626;
+        transition: all 0.2s;
+}
+.header > ul > li:hover {
+    background: #0aa81a;
+
+}
+
+.header > ul > li > a:hover {
+    color: #fff;
+}

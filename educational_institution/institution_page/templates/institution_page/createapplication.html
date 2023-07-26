@@ -1,0 +1,72 @@
+{% extends 'institution_page/base.html' %}
+    {% load static %}
+    {%block link%}<link type="text/css" href="{% static 'institution_page/css/applications.css' %}"  rel="stylesheet" />{%endblock%}
+
+{%block content%}
+    <p class="img_content"><img src="{% static 'institution_page/img/application_1.JPG' %}" width="500px" height="400px"></p>
+    <p class="img_content_2"><img src="{% static 'institution_page/img/application_2.jpeg' %}" width="500px" height="400px"></p>
+  <div class="container_application">
+      <div class="text_createapplications">
+            <p>Форма для подачи заявления в Наше Учебное заведение</p>
+      </div>
+      <form method="post" enctype="multipart/form-data"чё>
+          {% csrf_token %}
+          <div class="content">
+          <div>
+              <p>Введите ФИО ребёнка</p>
+            <p>{{ form.full_name }}</p>
+          </div>
+          <div>
+              <p>Введите паспортные данные ребёнка</p>
+                <p>{{ form.passport }}</p>
+          </div>
+          <div>
+              <p>Введите ФИО одного из родителей</p>
+                <p>{{ form.full_name_parent }}</p>
+          </div>
+          <div>
+              <p>Введите паспортные данные родителя</p>
+              <p>{{ form.passport_parent }}</p>
+          </div>
+          <div>
+              <p>Введите номер класса в который переходит студент</p>
+                <p>{{ form.class_student }}</p>
+          </div>
+          <div>
+              <p>Можете прикрепить файл с доп.информацией</p>
+                <spanф>{{ form.information_file }}</spanф>
+          </div>
+          <div>
+              <label for="{{ form.question_instuction.id_for_label }}"><p></p>Задавайте нам вопросы :)</label>
+              <br>
+                {{ form.question_instuction }}
+          </div>
+          <div id="email-form" style="display: none;">
+                <label for="{{ form.email.id_for_label }}">Введите вашу почту(туда придёт ответ на ваше сообщение)</label>
+              <br>
+                {{ form.email }}
+          </div>
+      </div>
+            <button>Отправить заявку</button>
+      </form>
+                  <hr>
+            <br>
+
+  </div>
+
+<!--Скрипт для вывода emailForm-->
+<script>
+  const question_instuctionInput = document.getElementById('{{ form.question_instuction.id_for_label }}');
+  const emailForm = document.getElementById('email-form');
+
+  question_instuctionInput.addEventListener('input', () => {
+    if (question_instuctionInput.value.trim().length > 0) {
+      emailForm.style.display = 'block';
+    } else {
+      emailForm.style.display = 'none';
+    }
+  });
+</script>
+
+
+{% endblock %}

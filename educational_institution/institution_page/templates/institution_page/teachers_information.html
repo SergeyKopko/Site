@@ -1,0 +1,28 @@
+{% extends 'institution_page/base.html' %}
+    {% load static %}
+    {%block link%}
+                  <link type="text/css" href="{% static 'institution_page/css/teachers.css' %}"  rel="stylesheet" />{%endblock%}
+{% block content %}
+    <div class="container_teachers">
+        <p>Наши сотрудники</p>
+        <div class="img">
+            <p style="text-align:center;"><img src="{% static 'institution_page/img/teachers_photo.jpg' %}" alt=""></p>
+        </div>
+        <div class="content_teachers">
+  
+            <hr>
+            <p class="icon_teacher"><img src="{% static 'institution_page/img/teacher_icon.png' %}" alt=""></p>
+            <p style="padding:45px; text-align:center; position:relative; font-weight: 400;"><i>„Корни образования горькие, но плоды сладкие.“</i></p>
+            {% for teacher in form %}
+            <div class="teacher_info">
+                <p class="name_teacher">{{ teacher.full_name }}</p>
+                <p class="position_teacher">{{ teacher.posititon }}</p>
+                <p class="photo_teacher"><img src="media/{{ teacher.photo }}" alt="" width="200px" height="200px"></p>
+                <div class="profile_teacher"><a style='border: 2px solid #399142; border-radius:15px; padding:5px;' href="{{ teacher.get_absolute_url }}">Открыть профиль</a></div>
+            </div>
+            {% endfor %}
+        </div>
+        <br>
+    </div>
+
+{%endblock%}

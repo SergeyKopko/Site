@@ -1,0 +1,39 @@
+{% extends 'institution_page/base.html' %}
+    {% load static %}
+    {%block link%}<link type="text/css" href="{% static 'institution_page/css/services_paid.css' %}"  rel="stylesheet" />{%endblock%}
+{% block content %}
+
+
+
+    <div class="banner">
+        <p >Предоставляемые нами услуги</p>
+        <i>Информация обновляется! Следите за новостями..</i>
+        <p style="float:left; margin-left: 180px; border:10px solid #ddd; border-radius:15px;" ><img src="{% static 'institution_page/img/1.jpg' %}" alt="" width="350px" height="300px;"></p>
+        <p style="float:right; margin-right: 180px;  border:10px solid #ddd; border-radius:15px;"><img src="{% static 'institution_page/img/2.jpg' %}" alt=""  width="350px" height="300px;"></p>
+        <p style="float:center; border:10px solid #ddd; border-radius:15px;"><img src="{% static 'institution_page/img/3.jpg' %}" alt=""  width="350px" height="300px;"></p>
+        <hr>
+            <p style="display:block; text-align: center;">НАШИ УСЛУГИ</p>
+    </div>
+
+<div class="container_files">
+        {% if form|length > 0 %}
+        {% for service in form %}
+    <div class="document_info">
+        <p>{{ service.name }}</p>
+        <p><img src="{{ service.photo.url }}" width="200px" height="200px" alt=""></p>
+        <p  style="position:relative;">{{ service.price_service }}</p>
+        <p>Обращаться для записи к <q>классному руководителю</q></p>
+        <p style="position:relative;"><a href="{{ service.get_absolute_url }}" style="text-decoration: none;"><i>Подробнее</i></a></p>
+    </div>
+        {% endfor %}
+    {%else%}
+    <span style="display: block; text-align:center; position:relative; left:500px; top:-50px;"><i>Наш список пуст! Ожидайте новых новостей :)</i></span>
+    {%endif%}
+</div>
+
+    <div>
+        <hr style="display: block; text-align:center; margin-top:220px;">
+    <p style="display: block; text-align:center; font-size: 22px;" ><i><q>Частная школа БЭУ</q></i></p>
+</div>
+
+{% endblock %}

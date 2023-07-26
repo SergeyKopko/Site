@@ -1,0 +1,43 @@
+
+{% extends 'institution_page/base.html' %}
+    {% load static %}
+    {%block link%}<link type="text/css" href="{% static 'institution_page/css/contact_info.css' %}"  rel="stylesheet" />
+{%endblock%}
+
+
+{% block content%}
+<div id="map" style="margin: 40px; position:relative; top: 100px;"></div>
+    <div class="container_contact">
+        <p style="text-align:center; display: block; position: relative; top:100px; padding-bottom: 120px; font-weight: 500;"> <q>Наши контакты</q></p>
+                <p style="text-align:center;"><i>Velcome: +375293438912</i></p>
+                    <a  style="margin-left: 40px; text-align:center; display: block; width:800px; margin-bottom: 60px;" class="velcome" href="tel:+37529343891">Позвонить нам</a>
+
+                            <p  style="text-align:center;"><i>MTC: +375333438912</i></p>
+                    <a  style="margin-left: 40px; text-align:center; display: block; width:800px;" class="MTC" href="tel:+3754343821">Позвонить нам</a>
+    </div>
+<br>
+        <p style="display: block; text-align:center; padding-left: 870px; padding-top: 50px;"><i>Адрес: Город Минск, Улица Сурганова, дом 1-В</i></p>
+<script type="text/javascript">
+ymaps.ready(init);
+
+function init() {
+    var myMap = new ymaps.Map("map", {
+        center: [53.897438, 27.524542],
+        zoom: 10
+    });
+
+    var myPlacemark = new ymaps.Placemark([53.897438, 27.524542], {
+        hintContent: 'мы здесь!',
+        balloonContent: 'Частная школа БЭУ'
+    });
+
+    myMap.geoObjects.add(myPlacemark);
+}
+</script>
+<script>
+  function callUs() {
+    window.open("tel:+37529343891");
+    window.open("tel:+3754343821");
+  }
+</script>
+{% endblock %}

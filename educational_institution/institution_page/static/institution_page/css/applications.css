@@ -1,0 +1,64 @@
+body {
+    background: #eee;
+}
+
+.container_application {
+    position: absolute;
+    top: 150px;
+    left:80px;
+
+}
+
+.content > div {
+    padding-bottom : 45px;
+    font-weight: bold;
+    font-family: 'Gill Sans, sans-serif';
+
+}
+
+.content > div > p {
+
+    font-weight: bold;
+    color: #0eb01e;
+    ext-shadow:1px 1px 1px silver;
+
+}
+
+.content > div > label {
+    font-weight: bold;
+    color: #0eb01e;
+    ext-shadow:1px 1px 1px silver;
+    margin-bottom:15px;
+}
+
+.file {
+    color: #0eb01e;
+}
+
+
+
+.container_application > .text_createapplications > p {
+    position: relative;
+    top: -50px;
+    left: 70%;
+
+    font-weight: bold;
+    font-family: 'Arial, sans-serif';
+}
+
+.img_content {
+    position: absolute;
+    left: 55%;
+    top: 40%;
+    border:4px solid #fff;
+
+}
+
+
+.img_content_2 {
+        position: absolute;
+    left: 55%;
+    top: 140%;
+    border:4px solid #fff;
+
+}

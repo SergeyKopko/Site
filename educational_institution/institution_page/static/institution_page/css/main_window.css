@@ -1,0 +1,153 @@
+body {
+    background: #eee;
+}
+
+.container_main {
+    width: 100%;
+    height:70px;
+    background: #e3e3e3;
+}
+
+.header {
+    position: absolute;
+    top: 15px;
+    height: 200px;
+}
+
+.header > ul > li {
+    display: inline;
+    text-align: center;
+    font-size: 16px;
+    padding: 5px;
+    margin: 5px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.5s;
+
+
+}
+.header > ul > li > a {
+        text-decoration: none;
+        color: #262626;
+        transition: all 0.2s;
+}
+.header > ul > li:hover {
+    background: #0aa81a;
+
+}
+
+.header > ul > li > a:hover {
+    color: #fff;
+}
+
+.img_info_main > p {
+    position: relative;
+    text-align: center;
+    top: 115px;
+
+}
+
+.img_info_main > p > img {
+    width: 760px;
+    height: 400px;
+    box-shadow: 10px 10px 5px #fff;
+    transition: all 0.5s;
+}
+
+.img_info_main > p > img:hover {
+    transform: scale(1.02);
+    opacity: 0.92;
+}
+
+.hr {
+    position: relative;
+    top: 200px;
+    box-shadow: 10px 10px 5px #fff;
+}
+
+.content_info {
+
+    position: relative;
+    top: 170px;
+    background: #e3e3e3;
+    padding: 20px;
+}
+
+
+
+.content_info > .icon > img {
+    width: 150px;
+    height:150px;
+
+    opacity: 0.3;
+}
+
+.content_info > .icon > p {
+    position: relative;
+    top: -75px;
+    left: 20px;
+    text-align: center;
+}
+
+.newb_block {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    top: 250px;
+}
+
+.newb_block > p {
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+.container_info {
+        display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+    width: 350px;
+    height: 500px;
+    border:2px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px #ddd;
+     transition: all 0.5s;
+}
+.container_info:hover {
+    transform: scale(1.07);
+    border:6px solid #ddd;
+}
+
+.container_info > p  {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.container_info > p > img {
+    border:2px solid #000;
+    border-radius: 15px;
+
+}
+.btn_main > p > a {
+    text-decoration: none;
+    border-radius:15px;
+    border:2px solid #ccc;
+    padding:10px;
+    position: absolute;
+
+    color: #3a3d3a;
+
+}
+
+.btn_main > p {
+    text-align: justify;
+}
+.container_info > p > a:hover {
+
+}
+
